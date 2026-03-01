@@ -3,10 +3,9 @@ const errorMessages = ["Wrong Answer", "Runtime Error", "Time Limit Exceeded", "
 let isVisible = false;
 
 function observe(selector) {
-  isVisible = true;
-
   const target = document.querySelector(selector);
   if (target && !isVisible) {
+    isVisible = true;
     if (selector === "div[data-e2e-locator='console-result']") {
       const text = target.textContent;
       if (errorMessages.some((errorMessage) => text.includes(errorMessage))) {
