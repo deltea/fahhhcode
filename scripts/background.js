@@ -1,5 +1,4 @@
 async function playSound(soundFile) {
-  // Create offscreen document if it doesn"t exist
   const existingContexts = await chrome.runtime.getContexts({
     contextTypes: ["OFFSCREEN_DOCUMENT"]
   });
@@ -12,7 +11,6 @@ async function playSound(soundFile) {
     });
   }
 
-  // Send message to offscreen document to play sound
   chrome.runtime.sendMessage({
     type: "play-sound",
     url: chrome.runtime.getURL(soundFile)

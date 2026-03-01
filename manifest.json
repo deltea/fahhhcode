@@ -9,7 +9,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://leetcode.com/problems/*"],
+      "matches": ["https://leetcode.com/problems/*", "https://bhs-cs.gigamonkeys.com/c/csa/coding/*"],
       "js": ["/scripts/content.js"]
     }
   ],
